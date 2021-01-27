@@ -10,3 +10,6 @@ in Alloy's infrastructure), serve a predictive model using a flask server, and t
 * Access file path through terminal and activate python environment (source yolla/bin/activate - using linux)
 * Pip install the dependencies found in the requirements.txt file
 * Run python Yolla_App.py
+
+### App url
+https://app-demo-303004.nn.r.appspot.com/
