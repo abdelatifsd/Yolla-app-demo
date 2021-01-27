@@ -19,6 +19,8 @@ def main_page():
 
 @app.route('/', methods=['POST'])
 def input_parameters():
+    with open("demand-forecasting-model.pkl", 'rb') as file:
+         prediction_model = pickle.load(file)  
     item_id = request.form['itemid']
     store_id = request.form['storeid']
     model_input = transform_user_input(int(store_id), int(item_id))
