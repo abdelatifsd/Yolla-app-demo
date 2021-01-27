@@ -6,12 +6,41 @@
     <picture>
       <img style="position:fixed;margin-top:-100px;" src="{{ user_image }}" alt="User Image">
     </picture>
-
-    <p style="position:fixed;margin-left:20px;margin-top:300px;font-family:Courier New;
-    font-size:50px;color:#1eaf95;"> Forecasting on demand </p>
-
   </head>
   <body>
+
+    <p style="position:fixed; margin-left:20px; margin-top:225px; font-family:Courier New;
+    font-size:50px; color:#1eaf95;"> Forecasting on demand. </p>
+
+    <p style="position:fixed;margin-left:20px;margin-top:375px;font-family:Courier New;
+    font-size:50px;color:#1eaf95;"> Demo: Sales forecasting for consumer brand X </p>
+
+    <form method="POST" style="position:fixed;margin-left:20px;margin-top:450px;">
+    <label for="storeid">Store ID:</label><br>
+    <input type="text" id="storeid" name="storeid"><br>
+    <label for="itemid">Item ID:</label><br>
+    <input type="text" id="itemid" name="itemid"><br><br>
+    <input type="submit" value="Submit Parameters">
+    </form>
+
+    <p style="position:fixed;margin-left:20px;margin-top:585px;" >
+
+      {{ prediction[0] }}
+
+    </p>
+
+    <p style="position:fixed;margin-left:20px;margin-top:650px;font-family:Courier New;
+    font-size:20px;color:#1eaf95;"> Model & Data source: https://drive.google.com/drive/folders/1kozP31vwNrSaYGs4vkyns0XaWTpnnA7T?usp=sharing </p>
+
+    <p style="position:fixed;margin-left:20px;margin-top:700px;font-family:Courier New;
+    font-size:20px;color:#1eaf95;"> App Github repo: https://github.com/abdelatifsd/Yolla-app-demo </p>
+
+    <p style="position:fixed;margin-left:20px;margin-top:750px;font-family:Courier New;
+    font-size:20px;color:#1eaf95;"> Tech used: Numpy, pandas, sci-kit learn, Flask, Git, GCP </p>
+
+    <p style="position:fixed;margin-left:20px;margin-top:800px;font-family:Courier New;
+    font-size:20px;color:#1eaf95;"> The purpose of this project is to learn how to deploy an app on GCP (given that GCP is mainly used
+    in Alloy's infrastructure), serve a predictive model using a flask server, and to familiarize myself with full stack development.</p>
 
   </body>
 </html>
