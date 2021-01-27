@@ -1,6 +1,7 @@
 # Yolla app 
 
-This is a flask application that serves a sci-kit learn simple forecasting model.
+The purpose of this project is to learn how to deploy an app on GCP (given that GCP is mainly used
+in Alloy's infrastructure), serve a predictive model using a flask server, and to familiarize myself with full stack development.
 
 
 ### Installing and execution
