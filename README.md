@@ -12,4 +12,4 @@ in Alloy's infrastructure), serve a predictive model using a flask server, and t
 * Run python Yolla_App.py
 
 ### App url
-https://app-demo-v2.nn.r.appspot.com/
+https://app-demo-v3.nn.r.appspot.com/
