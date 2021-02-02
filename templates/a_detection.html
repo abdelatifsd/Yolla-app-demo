@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style="padding-left:20px">
+
+    <div style="margin:0 auto; background-position:center; height:200px; width:400px; display:block;
+    background-image:url({{user_image}}); background-repeat:no-repeat"></div>
+
+    <h1 style="margin-top:-50px;display:block; text-align:center; font-family:Courier New;
+    font-size:30px; color:#1eaf95;"> Anomaly detection on demand. </h1>
+
+    <p style="font-family:Courier New;
+    font-size:25px;color:#1eaf95;"> Demo: Anomaly detection in e-commerce data. </p>
+
+    <p style="font-family:Courier New;
+    font-size:20px;color:black;"> An auto-encoder was trained on 500,000 ecommerce data points that include the following
+  features: product ID, city ID, order amount. Here are a few examples of non-anomalous orders from the dataset:
+  [1897,   26,    2],
+  [4850,   26,    4],
+  [2466,   26,    1] were each column represents product id, city id, and order amount respectively.
+  To test the model, pick one of the examples listed above and try changing the order amount drastically to see how the model's output changes.
+  The auto-encoder models a probability distribution over a dataset of "good transactions". 
+    </p>
+
+    <form method="POST" style="">
+    <label for="productid" style ="font-size:20px;font-family:Courier New;">Product ID:</label><br>
+    <input type="text" id="productid" name="productid"><br>
+    <label for="cityid" style ="font-size:20px;font-family:Courier New;" >City ID:</label><br>
+    <input type="text" id="cityid" name="cityid"><br>
+    <label for="orders" style ="font-size:20px;font-family:Courier New;" >Order amount:</label><br>
+    <input type="text" id="orders" name="orders"><br><br>
+    <input type="submit" value="Submit Parameters" style ="font-size:20px;font-family:Courier New;">
+    </form>
+
+    <p style="font-size:20px;font-family:Courier New;" >
+
+      {% if prediction == "ANOMALY DETECTED" %}
+      Outcome: <span style="color:red"> {{prediction}}</span>
+      {% else %}
+      Outcome: <span style="color:green"> {{prediction}}</span>
+      {% endif %}
+
+    </p>
+
+    <div style="border:1px solid #1eaf95;border-radius:15px;padding:20px">
+    <p style="font-family:Courier New;
+    font-size:20px;color:#1eaf95;display:block;"> Model & Data source: https://drive.google.com/drive/folders/1j5mXgGen1Km-jIENIjc5aTyV0KOmO_Xk?usp=sharing </p>
+
+    <p style="font-family:Courier New;
+    font-size:20px;color:#1eaf95;display:block;"> App Github repo: https://github.com/abdelatifsd/Yolla-app-demo </p>
+
+    <p style="font-family:Courier New;
+    font-size:20px;color:#1eaf95;display:block;"> Tech used: Numpy, pandas, sci-kit learn, Flask, Git, GCP, Keras </p>
+
+    <p style="font-family:Courier New;
+    font-size:20px;color:#1eaf95;display:block;"> The purpose of this project is to learn how to deploy an app on GCP, serve a predictive keras model using a flask server, familiarize myself with full stack development,
+    and briefly tackle an anomaly detection problem in the context of supply chain.</p>
+  </div>
+
+  </body>
+</html>
